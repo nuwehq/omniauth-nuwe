@@ -1,6 +1,9 @@
-# Omniauth::Nuwe
 
-TODO: Write a gem description
+![build status]https://codeship.com/projects/90ad4cf0-c028-0132-c8c4-12477713df02/status?branch=master
+
+# OmniAuth Nuwe
+
+This gem contains the Nuwe strategy for OmniAuth.
 
 ## Installation
 
