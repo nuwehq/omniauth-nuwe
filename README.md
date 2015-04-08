@@ -1,5 +1,5 @@
 
-![build status]https://codeship.com/projects/90ad4cf0-c028-0132-c8c4-12477713df02/status?branch=master
+![build status](https://codeship.com/projects/90ad4cf0-c028-0132-c8c4-12477713df02/status?branch=master)
 
 # OmniAuth Nuwe
 
