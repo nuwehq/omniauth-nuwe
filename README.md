@@ -3,32 +3,30 @@
 
 # OmniAuth Nuwe
 
-This gem contains the Nuwe strategy for OmniAuth.
+This gem contains the Nuwe OAuth2 Strategy for OmniAuth.
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Add to your application's `Gemfile`:
 
 ```ruby
 gem 'omniauth-nuwe'
 ```
 
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install omniauth-nuwe
+Then `bundle install`.
 
 ## Usage
 
-TODO: Write usage instructions here
+`OmniAuth::Strategies::Nuwe` is simply a Rack middleware. Read the OmniAuth docs for detailed instructions: https://github.com/intridea/omniauth.
 
-## Contributing
+Nuwe uses the Doorkeeper gem to use NuAPI as an OAuth2 provider. This is necessary to gain access to the V3 endpoints of this API.  Developers can sign up for a developer account at https://api.nuapi.co.
 
-1. Fork it ( https://github.com/[my-github-username]/omniauth-nuwe/fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
+Here's a quick example, adding the middleware to a Rails app in `config/initializers/omniauth.rb`:
+
+```ruby
+Rails.application.config.middleware.use OmniAuth::Builder do
+  provider :nuwe, ENV['NUWE_KEY'], ENV['NUWE_SECRET']
+end
+```
+
+You can now access the OmniAuth Nuwe OAuth2 URL: `/auth/nuwe`.

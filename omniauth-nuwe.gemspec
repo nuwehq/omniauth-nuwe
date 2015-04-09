@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["stephanie@spacebabies.nl"]
   spec.summary       = %q{OmniAuth strategy for Nuwe.}
   spec.description   = %q{OmniAuth strategy for Nuwe.}
-  spec.homepage      = ""
+  spec.homepage      = "https://api.nuapi.co"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split("\n")

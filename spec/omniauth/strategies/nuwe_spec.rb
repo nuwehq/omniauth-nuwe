@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe "OmniAuth::Strategies::Nuwe" do
   subject do
-    OmniAuth::Strategies::Nuwe.new(nil, @options || {})
+    OmniAuth::Strategies::Nuwe.new({})
   end
 
   context 'client options' do
