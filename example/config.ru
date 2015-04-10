@@ -1,5 +1,5 @@
 # Sample app for Nuwe OAuth2 Strategy
-# Make sure to setup the ENV variables NUWE_KEY and NUWE_SECRET
+# Make sure to setup the ENV variables APPLICATION_ID and CLIENT_SECRET
 # Run with "bundle exec rackup"
 
 require 'bundler/setup'
@@ -25,7 +25,7 @@ end
 use Rack::Session::Cookie, :secret => 'change_me'
 
 use OmniAuth::Builder do
-  provider :nuwe, ENV['NUWE_KEY'], ENV['NUWE_SECRET']
+  provider :nuwe, ENV['APPLICATION_ID'], ENV['CLIENT_SECRET']
 end
 
 run App.new

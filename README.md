@@ -25,8 +25,18 @@ Here's a quick example, adding the middleware to a Rails app in `config/initiali
 
 ```ruby
 Rails.application.config.middleware.use OmniAuth::Builder do
-  provider :nuwe, ENV['NUWE_KEY'], ENV['NUWE_SECRET']
+  provider :nuwe, ENV['APPLICATION_ID'], ENV['CLIENT_SECRET']
 end
 ```
 
 You can now access the OmniAuth Nuwe OAuth2 URL: `/auth/nuwe`.
+
+## Example
+
+1. Clone this repo and `cd` into it
+2. `bundle install`
+3. `cd example`
+4. Set ENV variables for APPLICATION_ID and CLIENT_SECRET
+5. Set redirect URI to `http://localhost:9292/auth/nuwe/callback` in your developer account at https://api.nuapi.co.
+6. `bundle exec rackup`
+7. Open http://localhost:9292 in your browser and follow links
