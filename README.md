@@ -19,7 +19,7 @@ Then `bundle install`.
 
 `OmniAuth::Strategies::Nuwe` is simply a Rack middleware. Read the OmniAuth docs for detailed instructions: https://github.com/intridea/omniauth.
 
-Nuwe uses the Doorkeeper gem to use NuAPI as an OAuth2 provider. This is necessary to gain access to the V3 endpoints of this API.  Developers can sign up for a developer account at https://api.nuapi.co.
+Nuwe uses the Doorkeeper gem to use NuAPI as an OAuth2 provider. This is necessary to gain access to the V3 endpoints of this API.  Developers can sign up for a developer account at https://developer.nuwe.co.
 
 Here's a quick example, adding the middleware to a Rails app in `config/initializers/omniauth.rb`:
 
@@ -37,6 +37,6 @@ You can now access the OmniAuth Nuwe OAuth2 URL: `/auth/nuwe`.
 2. `bundle install`
 3. `cd example`
 4. Set ENV variables for APPLICATION_ID and CLIENT_SECRET
-5. Set callback URI to `http://localhost:9292/auth/nuwe/callback` in your developer account at https://api.nuapi.co.
+5. Set callback URI to `http://localhost:9292/auth/nuwe/callback` in your developer account at https://developer.nuwe.co.
 6. `bundle exec rackup`
 7. Open http://localhost:9292 in your browser and follow links

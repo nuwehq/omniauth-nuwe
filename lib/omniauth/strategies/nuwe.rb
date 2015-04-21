@@ -7,9 +7,9 @@ module OmniAuth
       option :name, "nuwe"
 
       option :client_options, {
-        :site => "https://api.nuapi.co",
-        :authorize_url => "https://api.nuapi.co/oauth/authorize",
-        :token_url => "https://api.nuapi.co/oauth/token"
+        :site => "https://developer.nuwe.co",
+        :authorize_url => "https://developer.nuwe.co/oauth/authorize",
+        :token_url => "https://developer.nuwe.co/oauth/token"
       }
 
       uid { raw_info["user"]["id"] }

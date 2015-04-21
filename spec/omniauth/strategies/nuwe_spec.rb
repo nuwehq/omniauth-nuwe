@@ -11,11 +11,11 @@ describe "OmniAuth::Strategies::Nuwe" do
     end
 
     it 'has correct OAuth endpoint' do
-      expect(subject.options.client_options.site).to eq('https://api.nuapi.co')
+      expect(subject.options.client_options.site).to eq('https://developer.nuwe.co')
     end
 
     it 'has correct authorize url' do
-      expect(subject.options.client_options.authorize_url).to eq('https://api.nuapi.co/oauth/authorize')
+      expect(subject.options.client_options.authorize_url).to eq('https://developer.nuwe.co/oauth/authorize')
     end
   end
 
