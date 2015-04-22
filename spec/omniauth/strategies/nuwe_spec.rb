@@ -33,14 +33,16 @@ describe "OmniAuth::Strategies::Nuwe" do
   describe '#info' do
     before :each do
       @raw_info = { 'user' => { 'id' => 123,
-                                'email' => 'fred@example.com'},
-        'profile' => {
-        'first_name' => 'Fred',
-        'last_name' => 'Smith',
-        'sex' => 'F',
-        'birth_date' => '1981-08-01',
-        'activity' => 2 }
-      }
+                                'email' => 'fred@example.com',
+                                'profile' => {
+                                  'first_name' => 'Fred',
+                                  'last_name' => 'Smith',
+                                  'sex' => 'F',
+                                  'birth_date' => '1981-08-01',
+                                  'activity' => 2 }
+                              }
+                  }
+                  
       allow(subject).to receive_messages(:raw_info => @raw_info)
     end
 
