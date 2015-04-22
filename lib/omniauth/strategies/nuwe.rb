@@ -16,12 +16,12 @@ module OmniAuth
 
       info do
         {
-          :last_name => raw_info["profile"]["last_name"],
-          :first_name => raw_info["profile"]["first_name"],
+          :last_name => raw_info["user"]["profile"]["last_name"],
+          :first_name => raw_info["user"]["profile"]["first_name"],
           :email => raw_info["user"]["email"],
-          :sex => raw_info["profile"]["sex"],
-          :birth_date => raw_info["profile"]["birth_date"],
-          :activity => raw_info["profile"]["activity"]
+          :sex => raw_info["user"]["profile"]["sex"],
+          :birth_date => raw_info["user"]["profile"]["birth_date"],
+          :activity => raw_info["user"]["profile"]["activity"]
 
         }
       end
